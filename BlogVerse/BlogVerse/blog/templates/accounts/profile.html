@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<!-- accounts/profile.html -->
+<h1>{{ user.username }}'s Profile</h1>
+<img src="{{ profile.profile_picture.url }}" alt="Profile Picture" width="150" height="150">
+<p>Email: {{ user.email }}</p>
+<a href="{% url 'edit_profile' %}">Edit Profile</a>
+{% endblock %}

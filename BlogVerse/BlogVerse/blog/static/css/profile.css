@@ -1,0 +1,62 @@
+/* Profile container */
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: scale(1.03); /* Slightly enlarges the profile card on hover */
+}
+
+/* Profile heading */
+.profile-container h1 {
+    font-size: 28px;
+    color: #333; /* Dark text */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Profile image */
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular profile image */
+    border: 4px solid #ff7e5f; /* Add a border around the image */
+    transition: transform 0.4s ease;
+}
+
+.profile-container img:hover {
+    transform: rotate(360deg); /* Rotate profile image on hover */
+}
+
+/* Email text */
+.profile-container p {
+    font-size: 16px;
+    color: #555; /* Light grey text */
+    margin: 10px 0;
+    font-style: italic; /* Italicize email text */
+}
+
+/* Edit profile button */
+.profile-container a {
+    display: inline-block;
+    background-color: #ff7e5f; /* Button background */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-container a:hover {
+    background-color: #feb47b; /* Change button color on hover */
+    transform: translateY(-5px); /* Lift the button slightly on hover */
+}

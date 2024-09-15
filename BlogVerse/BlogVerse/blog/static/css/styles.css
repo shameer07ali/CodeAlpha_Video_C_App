@@ -1,0 +1,250 @@
+/* Apply the background to the entire body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(-45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow:auto;
+    position: relative; 
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Optional - Additional elements like h1 */
+h1 {
+    color: white;
+    font-size: 60px;
+    z-index: 1;
+}
+
+/* Content inside the body, if necessary */
+.container {
+    z-index: 1;
+    text-align: center;
+}
+
+/* Navbar General Styling */
+.navbar {
+     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    margin-bottom: 100px;
+    width: 100%;
+    max-height: 100px;
+    margin-left: 0px;
+    background: linear-gradient(-45deg, #86a8e77e, #91eae475, #ff7f5f81, #ffffffa1 );
+    animation: gradientAnimation 1s ease infinite;
+    position: fixed;
+    top: 0;
+}
+
+/* Brand logo styling */
+.navbar-brand {
+    color: #ff7e5f; /* White text color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #5f6aff; 
+}
+
+/* Navbar link styles */
+.nav-link {
+    color: #ffffff;
+    -webkit-text-stroke: #000;
+    font-size: 1rem;
+    background-color: transparent;
+    text-transform: capitalize;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+    gap: 120px;
+    font-weight: 400px;
+
+
+}
+.nav-item{
+    background: none;
+}
+.nav-link:hover {
+    color: #feb47b; /* Light orange color on hover */
+}
+
+/* Active link styling */
+.nav-link.active {
+    color: #ff7e5f; /* Set active link to orange gradient */
+    font-weight: bold;
+    border-bottom: 2px solid #ff7e5f; /* Underline active link */
+}
+
+/* Search form input and button */
+.form-control {
+    border-radius: 20px; /* Rounded search bar */
+    padding: 5px 20px;
+    border: 2px solid #fff; /* White border */
+    background-color: transparent; /* Light background color */
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ff7e5f; /* Orange border on focus */
+}
+
+.btn-outline-success {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #ff7e5f;
+    color: #fff;
+    border-color: #ff7e5f;
+}
+
+/* Toggler button for mobile */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.5 4h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1zm0 4h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1zm0 4h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1z'/%3E%3C/svg%3E");
+}
+
+/* Responsive behavior */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+        background-color: #0d2b4b;
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+}
+/* General Styling for the About Section */
+.about-section {
+    background-color: transparent; /* Removed background color */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #ff7e5f;
+    margin: 10px auto;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.about-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-info {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.about-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.about-info p strong {
+    color: #ff7e5f;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .about-info p {
+        font-size: 1rem;
+    }
+}

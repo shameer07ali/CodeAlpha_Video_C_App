@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static  %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<!-- About Section (Add this to your home.html or base.html) -->
+<section class="about-section" id="about">
+    <div class="about-container">
+        <h2>About Me</h2>
+        <p>
+            Hello, I'm Aoun Sajid, a passionate software engineer specializing in front-end development.
+            I have a strong background in React.js, Tailwind CSS, and Django. I love building responsive, 
+            user-friendly applications and websites. I am always eager to learn new technologies 
+            and enhance my coding skills. When I'm not coding, I enjoy exploring new ideas in UI/UX design.
+        </p>
+        <div class="about-details">
+            <div class="about-image">
+                <img src="{% static 'img/about.jpg' %}" alt="Profile Picture">
+            </div>
+            <div class="about-info">
+                <p><strong>Name:</strong> Aoun Sajid</p>
+                <p><strong>Location:</strong> Gujrat, Pakistan</p>
+                <p><strong>Expertise:</strong> Front-End Development, React.js, Django</p>
+                <p><strong>Interests:</strong> Web Development, UI/UX Design, Coding Challenges</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
